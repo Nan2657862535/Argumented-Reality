@@ -1,4 +1,4 @@
-package com.androidluckyguys;
+package com.androidluckyguys.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,6 +13,7 @@ import android.opengl.Matrix;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 
+import com.androidluckyguys.R;
 import com.androidluckyguys.helper.LocationHelper;
 import com.androidluckyguys.model.ARPoint;
 
@@ -33,7 +34,7 @@ public class AROverlayView extends View {
     Context context;
     private float[] rotatedProjectionMatrix = new float[16];
     private Location currentLocation;
-    private List<ARPoint> arPoints;
+    public static List<ARPoint> arPoints;
 
 
     public AROverlayView(Context context) {
@@ -46,6 +47,7 @@ public class AROverlayView extends View {
             add(new ARPoint("KLPAC", 3.1850, 101.6868, 0));
             add(new ARPoint("Twin Tower", 3.1579, 101.7116, 0));
         }};
+        //arPoints.add(new ARPoint("PARIS",33.165,45.165,0));
     }
 
     public void updateRotatedProjectionMatrix(float[] rotatedProjectionMatrix) {
@@ -95,18 +97,23 @@ public class AROverlayView extends View {
                 }
                 else
                 {
-                    d = ContextCompat.getDrawable(context, R.drawable.twin_tower);
+                    if (arPoints.get(i).getName().equals("PARIS")){
+                        //添加自己的图标
+                    }
+                    else {
+                        d = ContextCompat.getDrawable(context, R.drawable.twin_tower);
+                    }
                 }
 
-                Bitmap myBitmap = ((BitmapDrawable)d).getBitmap();
+              //  Bitmap myBitmap = ((BitmapDrawable)d).getBitmap();
 
 
-                canvas.drawBitmap(myBitmap, x - (30 * arPoints.get(i).getName().length() / 2), y - 80, paint);
+              //  canvas.drawBitmap(myBitmap, x - (30 * arPoints.get(i).getName().length() / 2), y - 80, paint);
                 //canvas.drawCircle(x, y, radius, paint);
-                canvas.drawText(arPoints.get(i).getName(), x - (30 * arPoints.get(i).getName().length() / 2), y - 80, paint);
-
+                canvas.drawText(arPoints.get(i).getName(), x - (30 * arPoints.get(i).getName().length() / 2)+arPoints.get(i).getx(), y - 80+60*i, paint);
 
             }
         }
     }
+
 }
