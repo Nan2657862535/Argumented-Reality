@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DailyMap"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="请输入地址名称"
+            android:layout_weight="100"
+            android:id="@+id/placename"
+            android:theme="@style/place_search"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/search"/>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/searched_places"
+        android:visibility="gone">
+
+    </ListView>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:id="@+id/parent">
+
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/mmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></com.baidu.mapapi.map.MapView>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/unfold"
+                    android:layout_gravity="right"
+                    android:id="@+id/open_tra_title" />
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="right|center"
+                    android:orientation="vertical"
+                    android:paddingRight="5dp"
+                    android:background="@color/colorWhite"
+                    android:layout_marginRight="8dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/flag"
+                            android:id="@+id/flag"
+                            />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/foot"
+                            android:id="@+id/foot"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:src="@drawable/morefunction"
+                        android:layout_weight="1"
+                        android:id="@+id/morefunction"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+        </FrameLayout>
+</LinearLayout>

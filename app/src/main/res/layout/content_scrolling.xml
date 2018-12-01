@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context="com.androidluckyguys.view.MoreFunction"
+tools:showIn="@layout/content_scrolling">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/user_phpto"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_toRightOf="@id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp">
+
+
+
+            <TextView
+
+                android:id="@+id/friend_name"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="好友昵称"
+
+                android:textColor="#2CA3E5"/>
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+
+                android:text="好友所发状态内容"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_below="@id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@id/linear1">
+            <ImageView
+                android:id="@+id/friend_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/user_phpto" />
+            <ImageView
+
+                android:id="@+id/friend_imag"
+
+                android:layout_width="60dp"
+
+                android:layout_height="60dp"
+
+                android:background="@drawable/user_phpto"
+
+                android:visibility="gone"/>
+            <ImageView
+
+                android:id="@+id/friend_ima"
+
+                android:layout_width="60dp"
+
+                android:layout_height="60dp"
+
+                android:background="@drawable/user_phpto"
+
+                android:visibility="gone"/>
+        </LinearLayout>
+        <TextView
+
+            android:id="@+id/time_text"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/linear2"
+
+            android:layout_alignLeft="@id/linear1"
+
+            android:layout_marginTop="10dp"
+
+            android:text="30分钟前"/>
+        <Button
+
+            android:layout_width="20dp"
+
+            android:layout_height="20dp"
+
+            android:layout_alignBottom="@+id/time_text"
+
+            android:layout_alignParentRight="true"
+
+            android:layout_marginRight="10dp"
+
+            android:background="@drawable/user_phpto"/>
+        <View
+
+            android:layout_below="@+id/time_text"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="1dp"
+
+            android:layout_marginTop="20dp"
+
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/user_phpto"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_toRightOf="@id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp">
+
+
+
+                <TextView
+
+                    android:id="@+id/friend_name"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="好友昵称"
+
+                    android:textColor="#2CA3E5"/>
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="5dp"
+
+                    android:text="好友所发状态内容"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_below="@id/linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@id/linear1">
+                <ImageView
+                    android:id="@+id/friend_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/user_phpto" />
+                <ImageView
+
+                    android:id="@+id/friend_imag"
+
+                    android:layout_width="60dp"
+
+                    android:layout_height="60dp"
+
+                    android:background="@drawable/user_phpto"
+
+                    android:visibility="gone"/>
+                <ImageView
+
+                    android:id="@+id/friend_ima"
+
+                    android:layout_width="60dp"
+
+                    android:layout_height="60dp"
+
+                    android:background="@drawable/user_phpto"
+
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <TextView
+
+                android:id="@+id/time_text"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/linear2"
+
+                android:layout_alignLeft="@id/linear1"
+
+                android:layout_marginTop="10dp"
+
+                android:text="30分钟前"/>
+            <Button
+
+                android:layout_width="20dp"
+
+                android:layout_height="20dp"
+
+                android:layout_alignBottom="@+id/time_text"
+
+                android:layout_alignParentRight="true"
+
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/user_phpto"/>
+            <View
+
+                android:layout_below="@+id/time_text"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="1dp"
+
+                android:layout_marginTop="20dp"
+
+                android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/user_phpto"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_toRightOf="@id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp">
+
+
+
+                <TextView
+
+                    android:id="@+id/friend_name"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="好友昵称"
+
+                    android:textColor="#2CA3E5"/>
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="5dp"
+
+                    android:text="好友所发状态内容"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_below="@id/linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@id/linear1">
+                <ImageView
+                    android:id="@+id/friend_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/user_phpto" />
+                <ImageView
+
+                    android:id="@+id/friend_imag"
+
+                    android:layout_width="60dp"
+
+                    android:layout_height="60dp"
+
+                    android:background="@drawable/user_phpto"
+
+                    android:visibility="gone"/>
+                <ImageView
+
+                    android:id="@+id/friend_ima"
+
+                    android:layout_width="60dp"
+
+                    android:layout_height="60dp"
+
+                    android:background="@drawable/user_phpto"
+
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <TextView
+
+                android:id="@+id/time_text"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/linear2"
+
+                android:layout_alignLeft="@id/linear1"
+
+                android:layout_marginTop="10dp"
+
+                android:text="30分钟前"/>
+            <Button
+
+                android:layout_width="20dp"
+
+                android:layout_height="20dp"
+
+                android:layout_alignBottom="@+id/time_text"
+
+                android:layout_alignParentRight="true"
+
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/user_phpto"/>
+            <View
+
+                android:layout_below="@+id/time_text"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="1dp"
+
+                android:layout_marginTop="20dp"
+
+                android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
